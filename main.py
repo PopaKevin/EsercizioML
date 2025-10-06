@@ -7,16 +7,16 @@ from sklearn.compose import ColumnTransformer
 
 app = FastAPI()
 
-# Carica modello e scaler
+
 model = joblib.load("best_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
-# Carica dati per colonne
+
 df = pd.read_csv("student_pe_performance.csv")
 df.drop("ID", axis=1, inplace=True)
 feature_columns = df.drop("Performance", axis=1).columns
 
-# Ricrea il preprocessing
+
 ordinal_cols = ['Class_Participation_Level', 'Motivation_Level',
                 'Final_Grade', 'Previous_Semester_PE_Grade', 'Grade_Level']
 ordinal_categories = [
