@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        label {
+            width: 100%;
+            font-weight: bold;
+        }
+        input, select {
+            padding: 5px;
+            width: 180px;
+        }
+        .field {
+            display: flex;
+            flex-direction: column;
+        }
+        .button {
+            margin-top: 20px;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 1.4em;
+            color: #333;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Performance Predictor</h1>
+    <form method="post">
+        <div class="field">
+            <label>Age</label>
+            <input type="number" step="any" name="Age" required>
+        </div>
+
+        <div class="field">
+            <label>Gender</label>
+            <select name="Gender" required>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Grade Level</label>
+            <select name="Grade_Level" required>
+                <option>9th</option>
+                <option>10th</option>
+                <option>11th</option>
+                <option>12th</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Strength Score</label>
+            <input type="number" step="any" name="Strength_Score" required>
+        </div>
+
+        <div class="field">
+            <label>Endurance Score</label>
+            <input type="number" step="any" name="Endurance_Score" required>
+        </div>
+
+        <div class="field">
+            <label>Flexibility Score</label>
+            <input type="number" step="any" name="Flexibility_Score" required>
+        </div>
+
+        <div class="field">
+            <label>Speed Agility Score</label>
+            <input type="number" step="any" name="Speed_Agility_Score" required>
+        </div>
+
+        <div class="field">
+            <label>BMI</label>
+            <input type="number" step="any" name="BMI" required>
+        </div>
+
+        <div class="field">
+            <label>Health Fitness Knowledge Score</label>
+            <input type="number" step="any" name="Health_Fitness_Knowledge_Score" required>
+        </div>
+
+        <div class="field">
+            <label>Skills Score</label>
+            <input type="number" step="any" name="Skills_Score" required>
+        </div>
+
+        <div class="field">
+            <label>Class Participation Level</label>
+            <select name="Class_Participation_Level" required>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Attendance Rate</label>
+            <input type="number" step="any" name="Attendance_Rate" required>
+        </div>
+
+        <div class="field">
+            <label>Motivation Level</label>
+            <select name="Motivation_Level" required>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Overall PE Performance Score</label>
+            <input type="number" step="any" name="Overall_PE_Performance_Score" required>
+        </div>
+
+        <div class="field">
+            <label>Improvement Rate</label>
+            <input type="number" step="any" name="Improvement_Rate" required>
+        </div>
+
+        <div class="field">
+            <label>Final Grade</label>
+            <select name="Final_Grade" required>
+                <option>F</option><option>D</option><option>C</option><option>B</option><option>A</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Previous Semester PE Grade</label>
+            <select name="Previous_Semester_PE_Grade" required>
+                <option>F</option><option>D</option><option>C</option><option>B</option><option>A</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Hours Physical Activity Per Week</label>
+            <input type="number" step="any" name="Hours_Physical_Activity_Per_Week" required>
+        </div>
+
+        <div class="button">
+            <button type="submit">Predict</button>
+        </div>
+    </form>
+
+    <div class="result">
+        {{ result }}
+    </div>
+</body>
+</html>
